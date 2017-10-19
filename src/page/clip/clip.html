@@ -8,11 +8,16 @@
 </div>
 
 <div class="container">
-
   <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="embed-responsive embed-responsive-16by9">
+        <youtube-video class="embed-responsive-item" video-id="$ctrl.selectedClip"></youtube-video>
+      </div>
+    </div>
+  </div>
 
-    <div ng-class="{'col-lg-6': $ctrl.selectedClip, 'col-lg-12': !$ctrl.selectedClip}">
-
+  <div class="row top-buffer">
+    <div>
       <div data-ng-repeat="clip in $ctrl.selectedAlbum.clips" data-ng-show="$ctrl.selectedAlbum.clips.length">
           <div class="clearfix" ng-if="$index % 4 == 0"></div>
           <div class="col-sm-3">
@@ -25,17 +30,10 @@
             </div>
           </div>
       </div>
-
       <div class="alert alert-info" data-ng-hide="$ctrl.selectedAlbum.clips.length">
         <strong>Info!</strong> Album "{{$ctrl.selectedAlbum.title}}" don't have any clips.
       </div>
     </div>
 
-    <div class="col-lg-6">
-      <div class="embed-responsive embed-responsive-16by9">
-        <youtube-video class="embed-responsive-item" video-id="$ctrl.selectedClip"></youtube-video>
-      </div>
-    </div>
   </div>
-
 </div>

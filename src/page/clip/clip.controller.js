@@ -25,6 +25,8 @@ export default class ClipController {
 
     if (!this.selectedAlbum) {
       $state.go('album');
+    } else if ((this.selectedAlbum.clips || []).length) {
+      this.playClip(this.selectedAlbum.clips[0]);
     }
 
   }
