@@ -8,5 +8,5 @@ The stack:
 * Bootstrap 3
 * Karma + Jasmine for testing
 
-npm install
-To start the webpack development server: ```npm start```
+```npm install```
+```npm start```
