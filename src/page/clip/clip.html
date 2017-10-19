@@ -1,0 +1,41 @@
+<div class="page-header">
+  <h1>{{$ctrl.selectedAlbum.title}}
+    <small><br>Clip list</small>
+    <button class="btn btn-sm btn-primary pull-right" ng-click="$ctrl.addClip()">
+      Add Clip
+    </button>
+  </h1>
+</div>
+
+<div class="container">
+
+  <div class="row">
+
+    <div ng-class="{'col-lg-6': $ctrl.selectedClip, 'col-lg-12': !$ctrl.selectedClip}">
+
+      <div data-ng-repeat="clip in $ctrl.selectedAlbum.clips" data-ng-show="$ctrl.selectedAlbum.clips.length">
+          <div class="clearfix" ng-if="$index % 4 == 0"></div>
+          <div class="col-sm-3">
+            <div class="thumbnail">
+              <a href ng-click="$ctrl.playClip(clip)"><img class="img-responsive" ng-src="http://img.youtube.com/vi/{{clip.link}}/0.jpg"></a>
+              <a href ng-click="$ctrl.playClip(clip)">{{clip.title}}</a>
+              <div>
+                <small>{{clip.description}}</small>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="alert alert-info" data-ng-hide="$ctrl.selectedAlbum.clips.length">
+        <strong>Info!</strong> Album "{{$ctrl.selectedAlbum.title}}" don't have any clips.
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="embed-responsive embed-responsive-16by9">
+        <youtube-video class="embed-responsive-item" video-id="$ctrl.selectedClip"></youtube-video>
+      </div>
+    </div>
+  </div>
+
+</div>

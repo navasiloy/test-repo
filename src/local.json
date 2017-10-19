@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Album #1",
+    "description": "Description for Album #1",
+    "clips": [
+      {
+        "id": 1,
+        "title": "Clip 1",
+        "description": "Description for Clip 1",
+        "link": "C0DPdy98e4c"
+      },
+      {
+        "id": 2,
+        "title": "Clip 2",
+        "description": "Description for Clip 2",
+        "link": "iNJdPyoqt8U"
+      },
+      {
+        "id": 3,
+        "title": "Clip 3",
+        "description": "Description for Clip 3",
+        "link": "2MpUj-Aua48"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Album #2",
+    "description": "Description for Album #2",
+    "clips": [
+    ]
+  }
+]
